@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Rumbo",
+    "slug": "rumbo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "rumbo",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rumbo.app"
+    },
+    "android": {
+      "package": "com.rumbo.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#2F6B5E",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.VIBRATE"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#E9EEF2"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Rumbo usa la cámara para que puedas tomar fotos.",
+          "photosPermission": "Rumbo accede a tu galería para que puedas elegir fotos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Rumbo usa tu ubicación para mostrarte tus coordenadas y tu dirección."
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "Rumbo usa los sensores de movimiento para funcionar como nivel."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
