@@ -11,8 +11,10 @@
     "preview": {
       "distribution": "internal",
       "android": {
-        "buildType": "apk"
-      }
+        "buildType": "apk",
+        "image": "latest"
+      },
+      "node": "22.13.0"
     },
     "production": {
       "autoIncrement": true
